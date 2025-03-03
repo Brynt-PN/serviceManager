@@ -1,0 +1,19 @@
+.ctLogin{
+  background: #D9DBDC;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.tbLogin {
+  padding: 20px;
+  border-radius: 10px;
+}
+.imgLogo {
+  width: 200px;
+  height: 200px;
+  background-image: url("/assets/icon/icon.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
