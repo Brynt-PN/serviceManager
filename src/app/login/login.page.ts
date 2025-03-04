@@ -23,8 +23,11 @@ export class LoginPage {
   login() {
     if (this.inUser === this.Us && this.inPassword === this.Pass) {
       alert("Inicio de sesión exitoso ✅");
+      this.router.navigate(['service']);
 
     } else {
+      alert("Usuario o contraseña incorrectos")
     }
   }
+
 }

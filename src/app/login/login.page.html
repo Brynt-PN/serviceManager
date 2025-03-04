@@ -3,34 +3,42 @@
     <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Login</ion-title>
     </ion-toolbar>
   </ion-header>
-   <div class="ctLogin">
-     <form>
-       <table class="tbLogin">
-         <tr>
-           <td><img class="imgLogo"></td>
-         </tr>
-         <tr>
-           <td><label class="lblText">Usuario</label></td>
-         </tr>
-         <tr>
-           <td><ion-input [(ngModel)]="inUser" )] class="inText"  placeholder="Ingresa nombre de Usuario"></td>
-         </tr>
-         <tr>
-           <td><label class="lblText">Contraseña</label></td>
-         </tr>
-         <tr>
-           <td><ion-input [(ngModel)]="inPassword" class="inText" id="inpassword" placeholder="Ingresa contraseña"></td>
-         </tr>
-         <tr>
-           <td><ion-button (click)="login()" )class="btnLogin">Login</ion-button></td>
-         </tr>
-       </table>
-     </form>
-   </div>
+
+  <div class="ctLogin">
+    <form (ngSubmit)="login()">
+      <table class="tbLogin">
+        <tr>
+          <td><img class="imgLogo"></td>
+        </tr>
+        <tr>
+          <td><label class="lblText">Usuario</label></td>
+        </tr>
+        <tr>
+          <td>
+            <ion-input [(ngModel)]="inUser" name="usuario" class="inText" placeholder="Ingresa nombre de Usuario"></ion-input>
+          </td>
+        </tr>
+        <tr>
+          <td><label class="lblText">Contraseña</label></td>
+        </tr>
+        <tr>
+          <td>
+            <ion-input [(ngModel)]="inPassword" name="password" class="inText" id="inpassword" placeholder="Ingresa contraseña" type="password"></ion-input>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ion-button type="submit" class="btnLogin">Login</ion-button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
 </ion-content>
