@@ -19,16 +19,16 @@
            <td><label class="lblText">Usuario</label></td>
          </tr>
          <tr>
-           <td><input type="text" class="inText" placeholder="Ingresa nombre de Usuario"></td>
+           <td><ion-input [(ngModel)]="inUser" )] class="inText"  placeholder="Ingresa nombre de Usuario"></td>
          </tr>
          <tr>
            <td><label class="lblText">Contraseña</label></td>
          </tr>
          <tr>
-           <td><input type="text" class="inText" placeholder="Ingresa contraseña"></td>
+           <td><ion-input [(ngModel)]="inPassword" class="inText" id="inpassword" placeholder="Ingresa contraseña"></td>
          </tr>
          <tr>
-           <td><div class="ctSubmit"><input type="submit" class="btnLogin"></div></td>
+           <td><ion-button (click)="login()" )class="btnLogin">Login</ion-button></td>
          </tr>
        </table>
      </form>
