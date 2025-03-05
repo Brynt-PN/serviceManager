@@ -4,9 +4,42 @@
   </ion-toolbar>
 </ion-header>
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Service</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Lista de Servicios</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <table class="custom-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Servicio</th>
+            <th>Precio</th>
+            <th>Disponibilidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr (click)="getDetails(1)">
+            <td>Logo</td>
+            <td>Reparación</td>
+            <td>$50</td>
+            <td>Disponible</td>
+          </tr>
+          <tr>
+            <td>Logo</td>
+            <td>Mantenimiento</td>
+            <td>$30</td>
+            <td>No Disponible</td>
+          </tr>
+          <tr>
+            <td>Logo</td>
+            <td>Instalación</td>
+            <td>$75</td>
+            <td>Disponible</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
