@@ -5,9 +5,46 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Request</ion-title>
     </ion-toolbar>
   </ion-header>
+
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Lista de Solicitudes</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list class="lstItems">
+        <ion-item *ngFor="let solicitud of arrSolicitudes">
+          <ion-label class="lblItems">
+
+            <table>
+              <tr>
+                <td>
+                  <ion-thumbnail slot="start">
+                    <ion-img [src]="solicitud.imgUrl"></ion-img>
+                  </ion-thumbnail>
+                </td>
+                <td>
+                  <h2>Servicio: {{ solicitud.Service }}</h2>
+                  <p>Solicitante: {{ solicitud.requester }}</p>
+                </td>
+              </tr>
+              <tr>
+                <td><ion-button class="btnDenegar" style="--background: #F44E51; --color: white;">Denegar</ion-button></td>
+                <td><ion-button class="btnAgregar" style="--background: #37EA81; --color: black;">Aceptar</ion-button></td>
+              </tr>
+            </table>
+
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
