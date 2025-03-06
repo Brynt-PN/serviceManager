@@ -6,7 +6,17 @@
 <ion-content [fullscreen]="true">
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Lista de Servicios</ion-card-title>
+      <ion-card-title>
+        <div class="header__wrapper">
+          <div class="header__title">Services</div>
+          <ion-button
+            class="header__button"
+            (click)="addService()"
+            style="--background: #37ea81; --color: black"
+            >Add Service</ion-button
+          >
+        </div>
+      </ion-card-title>
     </ion-card-header>
 
     <ion-card-content>
@@ -20,24 +30,16 @@
           </tr>
         </thead>
         <tbody>
-          <tr (click)="getDetails(1)">
-            <td>Logo</td>
-            <td>Reparación</td>
-            <td>$50</td>
-            <td>Disponible</td>
+          @for (service of services; track $index) {
+          <tr (click)="getDetails(service.id)">
+            <td>
+              <img [src]="service.imgUrl" alt="Logo" />
+            </td>
+            <td>{{service.name}}</td>
+            <td>${{service.price}}</td>
+            <td>{{service.disponibility ? 'Yes' : 'No'}}</td>
           </tr>
-          <tr>
-            <td>Logo</td>
-            <td>Mantenimiento</td>
-            <td>$30</td>
-            <td>No Disponible</td>
-          </tr>
-          <tr>
-            <td>Logo</td>
-            <td>Instalación</td>
-            <td>$75</td>
-            <td>Disponible</td>
-          </tr>
+          }
         </tbody>
       </table>
     </ion-card-content>

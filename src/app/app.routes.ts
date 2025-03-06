@@ -8,8 +8,8 @@ export const routes: Routes = [
   },
   {
     path: 'service',
-    loadComponent: () =>
-      import('./service/service.page').then((m) => m.ServicePage),
+    loadChildren: () =>
+      import('./service/service.routes').then((m) => m.routes),
   },
   {
     path: 'login',

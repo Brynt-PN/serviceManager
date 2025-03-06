@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Create New Service</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        <div class="header__wrapper">
+          <div class="header__title">New Services</div>
+          <ion-button
+            class="header__button"
+            type="submit"
+            (click)="onSubmit()"
+            [disabled]="!addServiceForm.valid"
+            style="--background: #37ea81; --color: black"
+            >Save</ion-button
+          >
+        </div>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-list [formGroup]="addServiceForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-input
+          label="Name Service"
+          labelPlacement="floating"
+          placeholder="Enter the name of the service"
+          formControlName="name"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input
+          label="Price Service"
+          labelPlacement="floating"
+          placeholder="Enter the price of the service"
+          formControlName="price"
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-toggle [checked]="true" formControlName="disponibility"
+          >Disponibility</ion-toggle
+        ><br /><br />
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
