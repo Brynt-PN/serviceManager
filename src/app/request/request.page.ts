@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {
@@ -9,24 +9,58 @@ import {
   IonButton,
   IonList,
   IonItem,
-  IonLabel, IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonImg, IonThumbnail
+  IonLabel,
+  IonCardContent,
+  IonCardTitle,
+  IonCardHeader,
+  IonCard,
+  IonImg,
+  IonThumbnail,
 } from '@ionic/angular/standalone';
-import index from "eslint-plugin-jsdoc";
+import { Requests } from '../share/models/request';
 
 @Component({
   selector: 'app-request',
   templateUrl: './request.page.html',
   styleUrls: ['./request.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonList, IonItem, IonLabel, IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonImg, IonThumbnail, IonButton]
+  imports: [
+    IonContent,
+    IonHeader,
+    IonTitle,
+    IonToolbar,
+    CommonModule,
+    FormsModule,
+    IonList,
+    IonItem,
+    IonLabel,
+    IonCardContent,
+    IonCardTitle,
+    IonCardHeader,
+    IonCard,
+    IonImg,
+    IonThumbnail,
+    IonButton,
+  ],
 })
 export class RequestPage {
-  arrSolicitudes : {imgUrl:String; Service: String; requester: String}[]=[
-    {imgUrl:"/assets/icon/Calidda.jpg",Service:"Gas Calidda", requester : "Oscar Jean Mario Arias Camasca"},
-    {imgUrl:"/assets/icon/netflix.jpg",Service:"Netflix", requester : "Jean Clairon Mario Arias Camasca"},
-    {imgUrl:"/assets/icon/onlyfans.jpg",Service:"OnlyFans", requester : "Brayant Palomino"}
-];
+  arrSolicitudes: Requests = [
+    {
+      imgUrl: '/assets/icon/Calidda.jpg',
+      Service: 'Gas Calidda',
+      requester: 'Oscar Jean Mario Arias Camasca',
+    },
+    {
+      imgUrl: '/assets/icon/netflix.jpg',
+      Service: 'Netflix',
+      requester: 'Jean Clairon Mario Arias Camasca',
+    },
+    {
+      imgUrl: '/assets/icon/onlyfans.jpg',
+      Service: 'OnlyFans',
+      requester: 'Brayant Palomino',
+    },
+  ];
 
-  constructor() { }
-
+  constructor() {}
 }
