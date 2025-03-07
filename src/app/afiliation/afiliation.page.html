@@ -5,9 +5,38 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Afiliation</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Afiliaciones</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-list>
+        <ion-item *ngFor="let afiliacion of arrAfiliacion">
+          <ion-label>
+            <div class="tdCtOwner">
+              <label class="lblOwnerText">Creador: </label>
+              <label class="lblOwnerVariable">{{afiliacion.Owner}}</label>
+            </div>
+            <table>
+
+              <tr>
+                <td>
+                  <ion-thumbnail slot="start">
+                    <ion-img [src]="afiliacion.imgUrl"></ion-img>
+                  </ion-thumbnail>
+                </td>
+                <td class="tdSubService"><div>Servicio</div>{{afiliacion.Service}}</td>
+                <td class="tdSubPrice"><div>Monto total</div>S/.{{afiliacion.Price}}</td>
+                <td class="tdSubNature"><div>Naturaleza</div>{{afiliacion.Nature}}</td>
+              </tr>
+            </table>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
 </ion-content>

@@ -11,6 +11,7 @@ import {
   IonItem,
   IonLabel, IonCardContent, IonCardTitle, IonCardHeader, IonCard, IonImg, IonThumbnail
 } from '@ionic/angular/standalone';
+import index from "eslint-plugin-jsdoc";
 
 @Component({
   selector: 'app-request',
