@@ -60,7 +60,6 @@ export class AddServicePage implements OnInit {
 
   onSubmit() {
     let services = this.serviceService.Services();
-    console.log(services);
     const { id, imgUrl } = services[services.length - 1];
     let newService = {
       id: id + 1,

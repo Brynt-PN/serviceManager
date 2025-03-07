@@ -10,4 +10,11 @@ export const routes: Routes = [
     loadComponent: () =>
       import('./add-service/add-service.page').then((m) => m.AddServicePage),
   },
+  {
+    path: ':id',
+    loadComponent: () =>
+      import('./service-detail/service-detail.page').then(
+        (m) => m.ServiceDetailPage
+      ),
+  },
 ];

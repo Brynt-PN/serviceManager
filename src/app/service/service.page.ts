@@ -14,8 +14,10 @@ import {
   IonCardTitle,
   IonCardContent,
   IonButton,
+  IonThumbnail,
+  IonImg,
 } from '@ionic/angular/standalone';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { ServiceService } from '../share/services/service.service';
 import { Services } from '../share/models/service';
 
@@ -25,6 +27,7 @@ import { Services } from '../share/models/service';
   styleUrls: ['./service.page.scss'],
   standalone: true,
   imports: [
+    IonImg,
     IonCardContent,
     IonCardTitle,
     IonCard,
@@ -38,6 +41,7 @@ import { Services } from '../share/models/service';
     IonCardHeader,
     IonItem,
     IonButton,
+    IonThumbnail,
   ],
 })
 export class ServicePage implements OnInit {
@@ -47,6 +51,11 @@ export class ServicePage implements OnInit {
 
   ngOnInit(): void {
     this.services = this.serviceService.Services();
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd && event.url === '/service') {
+        this.services = this.serviceService.Services();
+      }
+    });
   }
 
   getDetails(id: number) {

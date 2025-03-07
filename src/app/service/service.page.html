@@ -33,7 +33,9 @@
           @for (service of services; track $index) {
           <tr (click)="getDetails(service.id)">
             <td>
-              <img [src]="service.imgUrl" alt="Logo" />
+              <ion-thumbnail slot="start">
+                <ion-img [src]="service.imgUrl"></ion-img>
+              </ion-thumbnail>
             </td>
             <td>{{service.name}}</td>
             <td>${{service.price}}</td>

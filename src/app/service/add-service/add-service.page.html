@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card>
+  <ion-card [formGroup]="addServiceForm" (ngSubmit)="onSubmit()">
     <ion-card-header>
       <ion-card-title>
         <div class="header__wrapper">
@@ -21,7 +21,7 @@
         </div>
       </ion-card-title>
     </ion-card-header>
-    <ion-list [formGroup]="addServiceForm" (ngSubmit)="onSubmit()">
+    <ion-list>
       <ion-item>
         <ion-input
           label="Name Service"
