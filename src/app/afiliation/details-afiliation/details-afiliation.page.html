@@ -1,0 +1,94 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>details-afiliation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title>Detalles del servicio</ion-card-title>
+      </ion-card-header>
+
+      <table style="height: 100%; width: 100%;">
+        <tr class="configCt">
+          <td><ion-label style="font-size: 20px; text-align: center; border-bottom: #8c8c8c 1px solid">Nombre del Servicio</ion-label></td>
+        </tr>
+        <tr>
+          <td class="configCt">
+            <img class="imgLogo" src="/assets/icon/icon.jpg" alt="">
+          </td>
+        </tr>
+            <tr>
+              <td>
+                <ion-list>
+                  <ion-item>
+                    <ion-label style="font-size: 20px; text-align: center;">Detalles</ion-label>
+                  </ion-item>
+
+                  <ion-item>
+
+                    <table>
+                      <tr>
+                        <td>
+                          <ion-label style="background-color: #94C8FA; border-radius: 10px; padding-top: 12px; padding-bottom: 12px;margin-top: 5px">
+                            <label class="lblDetalle">Naturaleza: </label>
+                            <label>Fijo</label>
+                          </ion-label>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <ion-label style="background-color: #94C8FA; border-radius: 10px; padding-top: 12px; padding-bottom: 12px;margin-top: 5px">
+                            <label class="lblDetalle">Monto Total: </label>
+                            <label >S/.20.00</label>
+                          </ion-label>
+                        </td>
+                      </tr>
+                    </table>
+
+                  </ion-item>
+                </ion-list>
+
+              </td>
+            </tr>
+
+        <tr>
+          <td>
+            <ion-item>
+              <ion-label style="font-size: 20px; text-align: center">Integrantes</ion-label>
+            </ion-item>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <ion-list>
+              <ion-item>
+                <ion-label style="background-color: #94C8FA; border-radius: 10px; padding-top: 12px; padding-bottom: 12px;">
+
+                  <table>
+                    <tr>
+                      <td>
+                        <div class="ctIntegrantes">
+                          <label class="lblEstatus">Creador: </label>
+                          <label class="lblNombre">Nombre</label>
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                </ion-label>
+              </ion-item>
+              <div class="configCt">
+                <ion-button>Afiliar</ion-button>
+              </div>
+            </ion-list>
+          </td>
+        </tr>
+      </table>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>

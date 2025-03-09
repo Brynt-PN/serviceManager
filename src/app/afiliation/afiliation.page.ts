@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import {
+  IonButton,
   IonCard, IonCardContent,
   IonCardHeader,
   IonCardTitle,
@@ -26,8 +28,10 @@ export class AfiliationPage {
     {imgUrl:"/assets/icon/onlyfans.jpg",Service:"OnlyFans", Owner : "Brayant Palomino",Nature:"Fijo", Price:51}
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
-
+  detalles(){
+    this.router.navigate(['details-afiliation']);
+  }
 
 }

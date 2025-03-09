@@ -1,0 +1,38 @@
+.configCt{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgLogo {
+  width: 340px;
+  height: 340px;
+  min-height: 200px;
+  min-width: 200px;
+  border-radius: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-bottom: 12px;
+}
+
+.lblEstatus{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-top: 15.4px;
+  padding-bottom: 15.4px;
+  background-color: #8FED77;
+}
+
+.lblDetalle{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-top: 15.4px;
+  padding-bottom: 15.4px;
+  width: 100%;
+  background-color: #D9DBDC;
+}
+

@@ -39,7 +39,6 @@ import { Services } from '../share/models/service';
     CommonModule,
     FormsModule,
     IonCardHeader,
-    IonItem,
     IonButton,
     IonThumbnail,
   ],

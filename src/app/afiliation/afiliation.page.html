@@ -14,7 +14,7 @@
 
       <ion-list>
         <ion-item *ngFor="let afiliacion of arrAfiliacion">
-          <ion-label>
+          <ion-label (click)="detalles()">
             <div class="tdCtOwner">
               <label class="lblOwnerText">Creador: </label>
               <label class="lblOwnerVariable">{{afiliacion.Owner}}</label>
