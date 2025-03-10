@@ -48,15 +48,15 @@
         <tr>
           <td>
             <ion-list>
-              <ion-item>
+              <ion-item *ngFor="let datos of arrDatos">
                 <ion-label style="background-color: #94C8FA; border-radius: 10px; padding-top: 12px; padding-bottom: 12px;">
 
                   <table>
                     <tr>
                       <td>
                         <div class="ctIntegrantes">
-                          <label class="lblEstatus">Creador: </label>
-                          <label class="lblNombre">Nombre</label>
+                          <label class="lblEstatus" [ngClass]="{'afiliado': datos.Status === 'Afiliado'}">{{datos.Status}}: </label>
+                          <label class="lblNombre">{{datos.Nombre}} </label>
                         </div>
                       </td>
                     </tr>

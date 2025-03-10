@@ -19,15 +19,6 @@
   margin-bottom: 12px;
 }
 
-.lblEstatus{
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  padding-top: 15.4px;
-  padding-bottom: 15.4px;
-  padding-left: 10px;
-  background-color: #8FED77;
-}
-
 .lblDetalle{
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -37,8 +28,10 @@
   background-color: #D9DBDC;
 }
 .lblNombre{
-  padding-left: 5px;
+  max-width: 100%;
 }
+
+
 
 .btnAfiliar {
   margin: 12px auto;
@@ -58,4 +51,18 @@
 
 .btnAfiliar:hover {
   --background: #37EA81;
+}
+
+.lblEstatus {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-top: 15.4px;
+  padding-bottom: 15.4px;
+  padding-left: 10px;
+  background-color: #8FED77;
+}
+
+.afiliado {
+  background-color: #F8B789 !important;
+  padding-left: 16px;
 }

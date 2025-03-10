@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import {
@@ -20,6 +20,7 @@ import {
   imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCardContent, IonLabel, IonList, IonItem, IonButton, IonCard]
 })
 export class DetailsAfiliationPage {
+  @ViewChildren('ionItem') ionItems!: QueryList<ElementRef>
   comprovate: string = "Afiliar";
 
 
@@ -27,6 +28,8 @@ export class DetailsAfiliationPage {
 
   arrdetalle:{element:String}[]=[
     {element:"Naturaleza"},{element:"Monto total"}];
+
+  arrDatos: {Status:String;Nombre:String}[]=[{Status:"Creador",Nombre:"Oscar Jean mario Arias Camasca"},{Status:"Afiliado",Nombre:"Brayant Palomino"}];
 
   btnMetod(){
     if (this.comprovate==="Afiliar"){
