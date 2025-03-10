@@ -6,8 +6,8 @@
   align-items: center;
 }
 .imgLogo {
-  width: 340px;
-  height: 340px;
+  width: 250px;
+  height: 250px;
   min-height: 200px;
   min-width: 200px;
   border-radius: 20px;
@@ -24,6 +24,7 @@
   border-bottom-left-radius: 10px;
   padding-top: 15.4px;
   padding-bottom: 15.4px;
+  padding-left: 10px;
   background-color: #8FED77;
 }
 
@@ -35,4 +36,26 @@
   width: 100%;
   background-color: #D9DBDC;
 }
+.lblNombre{
+  padding-left: 5px;
+}
 
+.btnAfiliar {
+  margin: 12px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  width: 111px;
+  min-height: 40px;
+  --background: #D9DBDC;
+  --color: black;
+  --border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btnAfiliar:hover {
+  --background: #37EA81;
+}

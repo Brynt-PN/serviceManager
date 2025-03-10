@@ -17,13 +17,23 @@ import {
   templateUrl: './details-afiliation.page.html',
   styleUrls: ['./details-afiliation.page.scss'],
   standalone: true,
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCardContent, IonCardHeader, IonCardTitle, IonLabel, IonList, IonItem, IonButton, IonCard]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonCardContent, IonLabel, IonList, IonItem, IonButton, IonCard]
 })
-export class DetailsAfiliationPage implements OnInit {
+export class DetailsAfiliationPage {
+  comprovate: string = "Afiliar";
+
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  arrdetalle:{element:String}[]=[
+    {element:"Naturaleza"},{element:"Monto total"}];
 
+  btnMetod(){
+    if (this.comprovate==="Afiliar"){
+      this.comprovate="Desafiliar";
+    }
+    else if (this.comprovate==="Desafiliar"){
+      this.comprovate="Afiliar";
+    }
+  }
 }
