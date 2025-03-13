@@ -6,9 +6,9 @@ import {
   IonButton,
   IonCard, IonCardContent,
   IonCardHeader,
-  IonCardTitle,
-  IonContent,
-  IonHeader, IonImg, IonItem, IonLabel, IonList, IonThumbnail,
+  IonCardTitle, IonCol,
+  IonContent, IonGrid,
+  IonHeader, IonImg, IonItem, IonLabel, IonList, IonRow, IonThumbnail,
   IonTitle,
   IonToolbar
 } from '@ionic/angular/standalone';

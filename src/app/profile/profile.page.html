@@ -5,9 +5,43 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-content>
+
+      <ion-card-header>
+        <ion-card-title style="display: flex; justify-content: space-between;align-items: center">
+          <ion-label style="margin-right: auto">Perfil</ion-label><ion-button (click)="btnEditProfile()" style="margin-left: auto">Editar</ion-button>
+        </ion-card-title>
+      </ion-card-header>
+
+      <table class="ctTable">
+        <tr>
+          <td>
+            <ion-item><p class="pLarge">Oscar Jean Mario Arias Camasca</p></ion-item>
+          </td>
+          <br>
+        </tr>
+        <tr>
+          <td><img class="imgLogo" src="/assets/icon/icon.jpg"></td>
+        </tr>
+        <tr>
+          <td class="cajita"><p class="pLarge">Celular:</p></td>
+          <td><p class="pMedium">943363296</p></td>
+        </tr>
+        <tr>
+          <td class="cajita"><p class="pLarge">DNI:</p></td>
+          <td><p class="pMedium">76510989</p></td>
+        </tr>
+        <tr>
+          <td class="cajita"><p class="pLarge">Ubicación:</p></td>
+          <td><p class="pMedium">Tangamandapio, av los pirulos, calle 6</p></td>
+        </tr>
+        <tr>
+          <td class="cajita"><p class="pLarge">Fecha de Nacimiento:</p></td>
+          <td><p class="pMedium">25/05/2001</p></td>
+        </tr>
+      </table>
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>
