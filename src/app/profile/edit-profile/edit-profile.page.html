@@ -5,9 +5,38 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">edit-profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Edita tus datos</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form>
+        <table class="ctTable">
+          <tr>
+            <td><img class="imgLogo" src="assets/icon/icon.jpg"></td>
+          </tr>
+          <tr>
+            <td><ion-input class="inText" placeholder="ingresa tu nombre"></ion-input></td>
+          </tr>
+          <tr>
+            <td><ion-input  type="number" class="inText" placeholder="DNI"></ion-input></td>
+          </tr>
+          <tr>
+            <td><ion-input type="number" class="inText" placeholder="celular"></ion-input></td>
+          </tr>
+          <tr>
+            <td><ion-input class="inText" placeholder="ubicacion"></ion-input></td>
+          </tr>
+          <tr>
+            <td><ion-input type="date" class="inText" placeholder="fecha de nacimiento"></ion-input></td>
+          </tr>
+          <tr>
+            <td><ion-button class="btnGuardar">Guardar</ion-button></td>
+          </tr>
+        </table>
+      </form>
+
+    </ion-card-content>
+  </ion-card>
 </ion-content>
